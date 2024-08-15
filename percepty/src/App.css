@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&family=EB+Garamond:wght@400;700&display=swap');
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+p {
+  font-family: 'Fraunces';
+  padding-top: 5px;
+}
+
+h1 {
+  font-family: 'Fraunces';
+  color: #847577;
+}
+
+a {
+  font-family: 'EB Garamond';
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+.arrow {
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.arrow:hover{
+  opacity: 1;
+}
+
+.conclusion-symbol{
+  /* text-align: right; */
 }
