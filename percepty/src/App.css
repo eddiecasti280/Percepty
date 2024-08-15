@@ -40,17 +40,17 @@
 }
 
 p {
-  font-family: 'Fraunces';
+  font-family: 'Fraunces', serif;
   padding-top: 5px;
 }
 
 h1 {
-  font-family: 'Fraunces';
+  font-family: 'Fraunces', serif;
   color: #847577;
 }
 
 a {
-  font-family: 'EB Garamond';
+  font-family: 'EB Garamond', serif;
 }
 
 .fade-in {
@@ -71,6 +71,28 @@ a {
   opacity: 1;
 }
 
-.conclusion-symbol{
-  /* text-align: right; */
+
+/* Ensure nested dropdowns are positioned correctly */
+.dropdown-menu {
+  position: relative;
+}
+
+/* Styles for nested dropdown */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: 1px;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu .dropdown-item {
+  white-space: nowrap;
 }

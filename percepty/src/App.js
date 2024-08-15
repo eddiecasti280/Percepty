@@ -1,28 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navigation from './Navigation';
-import KnowledgePartition from './KnowledgePartition';
-import SectionHeading from './SectionHeading';
+import IntegrationModule from './KnowledgeModules/IntegralsModule';
 import colors from './constants';
-import LatexSnippet from './LatexSnippet';
-import { InlineMath, BlockMath } from 'react-katex';
-import 'katex/dist/katex.min.css';
+import MathematicsOverview from './OverviewPages/MathematicsOverview';
 
 function App() {
   return (
-    <div style={{ backgroundColor: colors.floral_white, minHeight: '100vh', padding: '20px' }}>
-      <Navigation />
-      <SectionHeading text="Integrals" />
-      
-      <KnowledgePartition>
-            <p>Here are some important equations:</p>
-            <LatexSnippet latex='\int_{0}^{\infty} \frac{1}{x^2 + 1} \, dx = \frac{\pi}{2}' displayMode={true} />
-            <LatexSnippet latex='\frac{d}{dx} e^x = e^x' displayMode={true} />
-            <LatexSnippet latex='\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}' displayMode={true} />
-            <LatexSnippet latex='E = mc^2' displayMode={true} />
-        </KnowledgePartition>
-    </div>
+    <Router>
+      <div style={{ backgroundColor: colors.floral_white, minHeight: '100vh', padding: '20px' }}>
+        <Navigation />
+        <Routes>
+          <Route path="/integration" element={<IntegrationModule />} />
+          <Route path="/mathOverview" element={<MathematicsOverview />} /> 
+        </Routes>
+      </div>
+    </Router>
+
   );
 }
 

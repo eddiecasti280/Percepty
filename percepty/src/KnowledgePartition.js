@@ -1,24 +1,33 @@
+import React, {useRef} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import colors from "./constants";
 import './App.css';
-import LatexSnippet from "./LatexSnippet";
 
+function KnowledgePartition({ children, id }) {
+    const containerRef = useRef(null);
 
+    const scrollToNext = () => {
+        const nextElement = document.getElementById(id === 'partition1' ? 'partition2' : 'partition1');
+        if (nextElement) {
+            nextElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
-function KnowledgePartition({ children }) {
     return (
-      <div>
-        <div class="container" style={{ backgroundColor: colors.silver, padding: '20px', borderRadius: '8px', marginTop: '10px'}}>
-            {children}
-            
-            {/* Arrow */}
-            <div class="arrow" style={{ textAlign: 'center', fontSize: '24px', marginTop: '5px' }}>
-                &#x25BC;
+        <div>
+            <div
+                id={id}
+                className="container"
+                ref={containerRef}
+                style={{ backgroundColor: colors.silver, padding: '20px', borderRadius: '8px', marginTop: '10px' }}
+            >
+                {children}
+                <div class="arrow" style={{ textAlign: 'center', fontSize: '24px', marginTop: '5px' }} onClick={scrollToNext}>
+                    &#x25BC;
+                </div>
             </div>
         </div>
-      </div>
     );
-  }
-  
-  export default KnowledgePartition;
-  
+}
+
+export default KnowledgePartition;

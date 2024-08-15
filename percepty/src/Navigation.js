@@ -1,32 +1,58 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import colors from './constants'
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import colors from './constants';
 
-function Navigation(){
-    return (
-        <nav class="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: colors.taupe_gray, paddingLeft: '10px' }}>
-            <a class="navbar-brand" href="#">Percepty</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Mathematics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Programming</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Linguistics</a>
-                    </li>
+function Navigation() {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: colors.taupe_gray, paddingLeft: '10px' }}>
+      <a className="navbar-brand" href="#">Percepty</a>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Mathematics
+            </a>
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><Link className='dropdown-item' to='/mathOverview'>Overview</Link></li>
+                <li><Link className="dropdown-item" to="/integration">Integration</Link></li>
+                <li><Link className="dropdown-item" to="/derivatives">Derivatives</Link></li>
+            </ul>
+          </li>
+          {/* Add other links here */}
+          <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Programming
+            </a>
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              {/* <li><Link className="dropdown-item" to="/integration">Python</Link></li> */}
+              <li className="dropdown-submenu">
+                <a className="dropdown-item dropdown-toggle" href="#">Python</a>
+                <ul className="dropdown-menu">
+                  <li><Link className="dropdown-item" to="/derivatives/basic">Basic</Link></li>
+                  <li><Link className="dropdown-item" to="/derivatives/advanced">Advanced</Link></li>
                 </ul>
-            </div>
-        </nav>
-    )
+              </li>
+              <li><Link className="dropdown-item" to="/derivatives">Java</Link></li>
+            </ul>
+          </li>
+          <li className="nav-item dropdown">
+            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Linguistics
+            </a>
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><Link className="dropdown-item" to="/integration">Alphabets and Syllabaries</Link></li>
+              <li><Link className="dropdown-item" to="/derivatives">Theory</Link></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
 }
 
 export default Navigation;
