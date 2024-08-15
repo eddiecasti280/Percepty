@@ -22,6 +22,7 @@ function IntegralsModule() {
         <p>More equations:</p>
         <LatexSnippet latex='a^2+b^2=c^2' displayMode={true} />
         <LatexSnippet latex='\frac{\mathcal D}{t}=\nabla\times\mathcal{H}' displayMode={true} />
+        <LatexSnippet latex='\begin{bmatrix}1&2\\2&1\end{bmatrix}' displayMode={true} />
       </KnowledgePartition>
     </div>
   );

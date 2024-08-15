@@ -6,6 +6,7 @@ import Navigation from './Navigation';
 import IntegrationModule from './KnowledgeModules/IntegralsModule';
 import colors from './constants';
 import MathematicsOverview from './OverviewPages/MathematicsOverview';
+import Splash from './LogisticsPages/Splash';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <div style={{ backgroundColor: colors.floral_white, minHeight: '100vh', padding: '20px' }}>
         <Navigation />
         <Routes>
+          <Route path="/" element={<Splash />} />
           <Route path="/integration" element={<IntegrationModule />} />
           <Route path="/mathOverview" element={<MathematicsOverview />} /> 
         </Routes>

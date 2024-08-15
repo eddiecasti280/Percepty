@@ -4,6 +4,7 @@ const colors = {
     timberwolf: '#CFD2CD',
     silver: '#A6A2A2',
     taupe_gray: '#847577',
+    green: '#8A9A5B',
     text: '#3B3C36',
 };
   

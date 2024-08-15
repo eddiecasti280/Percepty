@@ -7,7 +7,7 @@ import colors from './constants';
 function Navigation() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: colors.taupe_gray, paddingLeft: '10px' }}>
-      <a className="navbar-brand" href="#">Percepty</a>
+      <a className="navbar-brand" href="/">Percepty</a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
@@ -33,11 +33,11 @@ function Navigation() {
               <li className="dropdown-submenu">
                 <a className="dropdown-item dropdown-toggle" href="#">Python</a>
                 <ul className="dropdown-menu">
-                  <li><Link className="dropdown-item" to="/derivatives/basic">Basic</Link></li>
-                  <li><Link className="dropdown-item" to="/derivatives/advanced">Advanced</Link></li>
+                  <li><Link className="dropdown-item" to="/python/basic">Basic</Link></li>
+                  <li><Link className="dropdown-item" to="/python/advanced">Advanced</Link></li>
                 </ul>
               </li>
-              <li><Link className="dropdown-item" to="/derivatives">Java</Link></li>
+              <li><Link className="dropdown-item" to="/java">Java</Link></li>
             </ul>
           </li>
           <li className="nav-item dropdown">
@@ -45,8 +45,8 @@ function Navigation() {
               Linguistics
             </a>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><Link className="dropdown-item" to="/integration">Alphabets and Syllabaries</Link></li>
-              <li><Link className="dropdown-item" to="/derivatives">Theory</Link></li>
+              <li><Link className="dropdown-item" to="/linguistics/alphaSyll">Alphabets and Syllabaries</Link></li>
+              <li><Link className="dropdown-item" to="/linguistics/theory">Theory</Link></li>
             </ul>
           </li>
         </ul>
