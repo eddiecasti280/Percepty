@@ -18,7 +18,7 @@ function IntegralsModule() {
         <LatexSnippet latex='\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}' displayMode={true} />
         <LatexSnippet latex='E = mc^2' displayMode={true} />
       </KnowledgePartition>
-      <KnowledgePartition id="partition2">
+      <KnowledgePartition id="partition2" isLast={true}>
         <p>More equations:</p>
         <LatexSnippet latex='a^2+b^2=c^2' displayMode={true} />
         <LatexSnippet latex='\frac{\mathcal D}{t}=\nabla\times\mathcal{H}' displayMode={true} />

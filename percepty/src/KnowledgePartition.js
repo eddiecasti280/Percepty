@@ -1,9 +1,9 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import colors from "./constants";
 import './App.css';
 
-function KnowledgePartition({ children, id }) {
+function KnowledgePartition({ children, id, isLast }) {
     const containerRef = useRef(null);
 
     const scrollToNext = () => {
@@ -22,9 +22,15 @@ function KnowledgePartition({ children, id }) {
                 style={{ backgroundColor: colors.silver, padding: '20px', borderRadius: '8px', marginTop: '10px' }}
             >
                 {children}
-                <div class="arrow" style={{ textAlign: 'center', fontSize: '24px', marginTop: '5px' }} onClick={scrollToNext}>
-                    &#x25BC;
-                </div>
+                {!isLast && (
+                    <div
+                        className="arrow"
+                        style={{ textAlign: 'center', fontSize: '24px', marginTop: '5px', cursor: 'pointer' }}
+                        onClick={scrollToNext}
+                    >
+                        &#x25BC;
+                    </div>
+                )}
             </div>
         </div>
     );
