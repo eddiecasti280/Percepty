@@ -7,7 +7,8 @@ function KnowledgePartition({ children, id, isLast }) {
     const containerRef = useRef(null);
 
     const scrollToNext = () => {
-        const nextElement = document.getElementById(id === 'partition1' ? 'partition2' : 'partition1');
+        const nextPartitionId = `partition${parseInt(id.replace('partition', '')) + 1}`;
+        const nextElement = document.getElementById(nextPartitionId);
         if (nextElement) {
             nextElement.scrollIntoView({ behavior: 'smooth' });
         }

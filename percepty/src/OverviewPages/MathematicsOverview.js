@@ -20,7 +20,7 @@ function MathematicsOverview() {
                 imageSrc="path/to/image2.jpg" 
                 title="Card 2" 
                 text="This is some quick example text." 
-                link="#"
+                link="/basicOperations"
             />
             <ModuleCard 
                 imageSrc="path/to/image3.jpg" 
