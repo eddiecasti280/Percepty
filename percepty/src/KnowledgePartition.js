@@ -20,7 +20,13 @@ function KnowledgePartition({ children, id, isLast }) {
                 id={id}
                 className="container"
                 ref={containerRef}
-                style={{ backgroundColor: colors.silver, padding: '20px', borderRadius: '8px', marginTop: '10px' }}
+                style={{ 
+                    backgroundColor: colors.silver, 
+                    padding: '20px', 
+                    borderRadius: '8px', 
+                    marginTop: '10px',
+                    boxShadow: '0px 20px 20px rgba(0, 0, 0, 0.1)'
+                }}
             >
                 {children}
                 {!isLast && (
