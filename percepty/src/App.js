@@ -8,6 +8,7 @@ import colors from './constants';
 import MathematicsOverview from './OverviewPages/MathematicsOverview';
 import Splash from './LogisticsPages/Splash';
 import BasicOperationsModule from './KnowledgeModules/BasicOperationsModule';
+import PythonGettingStarted from './KnowledgeModules/PythonGettingStarted';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/mathOverview" element={<MathematicsOverview />} /> 
           <Route path="/integration" element={<IntegrationModule />} />
           <Route path="/basicOperations" element={<BasicOperationsModule />} />
+          <Route path="/pythonGettingStarted" element={<PythonGettingStarted />} />
         </Routes>
       </div>
     </Router>

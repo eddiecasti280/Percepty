@@ -6,6 +6,7 @@ import SectionHeading from '../SectionHeading';
 import colors from '../constants';
 import LatexSnippet from '../LatexSnippet';
 import 'katex/dist/katex.min.css';
+import AuthorPartition from '../AuthorPartition';
 
 function IntegralsModule() {
   return (
@@ -24,6 +25,7 @@ function IntegralsModule() {
         <LatexSnippet latex='\frac{\mathcal D}{t}=\nabla\times\mathcal{H}' displayMode={true} />
         <LatexSnippet latex='\begin{bmatrix}1&2\\2&1\end{bmatrix}' displayMode={true} />
       </KnowledgePartition>
+      <AuthorPartition name="Eddie Castillo" date="08-15-2024"></AuthorPartition>
     </div>
   );
 }

@@ -9,6 +9,9 @@ function Splash() {
       <div className="header-container">
         <h1 className="website-name fade-in2" style={{color: 'White', fontSize: '74px'}}>Percepty</h1>
       </div>
+      <div className="header-container2">
+        <h3 className="fade-in2" style={{color: 'White', fontSize: '48px'}}>A progression-based notes platform for computational topics</h3>
+      </div>
     </div>
   );
 }
