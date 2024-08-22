@@ -5,7 +5,7 @@ import './App.css';
 import Avatar, { genConfig } from 'react-nice-avatar';
 
 function AuthorPartition({ name, date }) {
-    var mydate = new Date(date);
+    let mydate = new Date(date);
     const outputDate = mydate.toDateString();
     const config = genConfig({ sex: "man", hairStyle: "thick", shirtStyle: "hoody", faceColor: "#d39972", glassesStyle: "none", mouthStyle: "smile", eyeStyle: "circle" });
 

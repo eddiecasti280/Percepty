@@ -15,7 +15,7 @@ function PythonGettingStarted() {
     <div style={{ backgroundColor: colors.floral_white, minHeight: '100vh', padding: '20px' }}>
     <SectionHeading text="Installation" />
     <KnowledgePartition id="partition1">
-    <CodingSnippet code={'print(hello)'} language={'Python'} startingLineNumber={false}>
+    <CodingSnippet code={'print(hello)'} language={'Python'} startingLineNumber={false}> 
 
     </CodingSnippet>
     </KnowledgePartition>
