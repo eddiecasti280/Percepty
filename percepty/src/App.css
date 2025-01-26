@@ -77,7 +77,6 @@ a {
 }
 
 
-/* Ensure nested dropdowns are positioned correctly */
 .dropdown-menu {
   position: relative;
 }
@@ -101,13 +100,6 @@ a {
 .dropdown-menu .dropdown-item {
   white-space: nowrap;
 }
-
-
-
-
-
-
-
 
 /* Centering the header */
 .header-container {
