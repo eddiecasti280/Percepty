@@ -1,13 +1,13 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import colors from "./constants";
-import './App.css';
+import colors from "../utils/constants";
+import '../styles/App.css';
 import Avatar, { genConfig } from 'react-nice-avatar';
 
-function AuthorPartition({ name, date }) {
+function AuthorPartition({ name, description, date }) {
     let mydate = new Date(date);
     const outputDate = mydate.toDateString();
     const config = genConfig({ sex: "man", hairStyle: "thick", shirtStyle: "hoody", faceColor: "#d39972", glassesStyle: "none", mouthStyle: "smile", eyeStyle: "circle" });
+    const isURL = typeof description === 'string' && description.startsWith('http'); // Checks URL text to see if string is eligible to redirect to page
 
     return (
         <div className="container" style={{ backgroundColor: colors.timberwolf, padding: '20px', borderRadius: '8px', marginTop: '10px', boxShadow: '0px 20px 20px rgba(0, 0, 0, 0.1)'}}>
@@ -17,7 +17,7 @@ function AuthorPartition({ name, date }) {
                 </div>
                 <div className="col-md-8" style={{backgroundColor:colors.floral_white, borderRadius: '8px'}}>
                     <p><strong>Author:</strong> {name}</p>
-                    <p>I'm a student at The University of Texas at Austin pursuing a Master's in Artificial Intelligence.</p>
+                    <p>{isURL ? (<a href={description} target="_blank" rel="noopener noreferrer">{description}</a>) : (description)}</p>
                     <p><strong>Published on:</strong> {outputDate}</p>
                 </div>
             </div>

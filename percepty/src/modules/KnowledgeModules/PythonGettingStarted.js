@@ -1,12 +1,11 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../App.css';
-import KnowledgePartition from '../KnowledgePartition';
-import SectionHeading from '../SectionHeading';
-import colors from '../constants';
-import LatexSnippet from '../LatexSnippet';
+import '../../styles/App.css';
+import KnowledgePartition from '../../components/KnowledgePartition';
+import SectionHeading from '../../components/SectionHeading';
+import colors from '../../utils/constants';
+import LatexSnippet from '../../components/LatexSnippet';
 import 'katex/dist/katex.min.css';
-import CodingSnippet from '../CodingSnippet';
+import CodingSnippet from '../../components/CodingSnippet';
 
 
 

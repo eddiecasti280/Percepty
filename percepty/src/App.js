@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import Navigation from './Navigation';
-import IntegrationModule from './KnowledgeModules/IntegralsModule';
-import colors from './constants';
-import MathematicsOverview from './OverviewPages/MathematicsOverview';
-import Splash from './LogisticsPages/Splash';
-import BasicOperationsModule from './KnowledgeModules/BasicOperationsModule';
-import PythonGettingStarted from './KnowledgeModules/PythonGettingStarted';
+import './styles/App.css';
+import Navigation from './components/Navigation';
+import IntegrationModule from './modules/KnowledgeModules/IntegralsModule';
+import colors from './utils/constants';
+import MathematicsOverview from './pages/OverviewPages/MathematicsOverview';
+import Splash from './pages/LogisticsPages/Splash';
+import BasicOperationsModule from './modules/KnowledgeModules/BasicOperationsModule';
+import VectorArithmeticModule from './modules/KnowledgeModules/VectorArithmetic';
+import PythonGettingStarted from './modules/KnowledgeModules/PythonGettingStarted';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Route path="/mathOverview" element={<MathematicsOverview />} /> 
           <Route path="/integration" element={<IntegrationModule />} />
           <Route path="/basicOperations" element={<BasicOperationsModule />} />
+          <Route path="/vectorArithmetic" element={<VectorArithmeticModule />} />
           <Route path="/pythonGettingStarted" element={<PythonGettingStarted />} />
         </Routes>
       </div>

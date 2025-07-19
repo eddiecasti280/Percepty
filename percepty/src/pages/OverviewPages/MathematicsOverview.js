@@ -1,8 +1,7 @@
 import React from 'react';
-import SectionHeading from '../SectionHeading';
-import colors from '../constants';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ModuleCard from '../ModuleCard';
+import SectionHeading from '../../components/SectionHeading';
+import colors from '../../utils/constants';
+import ModuleCard from '../../components/ModuleCard';
 
 function MathematicsOverview() {
   return (
@@ -17,19 +16,18 @@ function MathematicsOverview() {
                 link="/integration"
             />
             <ModuleCard 
-                imageSrc="path/to/image2.jpg" 
-                title="Card 2" 
+                imageSrc="percepty/src/moduleIcons/operations.jpg" 
+                title="Basic Operations" 
                 text="This is some quick example text." 
                 link="/basicOperations"
             />
             <ModuleCard 
-                imageSrc="path/to/image3.jpg" 
-                title="Card 3" 
+                imageSrc="percepty/src/moduleIcons/vectors.jpg" 
+                title="Vector Arithmetic" 
                 text="This is some quick example text." 
-                link="#"
+                link="/vectorArithmetic"
             />
         </div>
-        {/* Add more rows if needed */}
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import colors from './constants'
+import '../styles/App.css';
+import colors from '../utils/constants';
 
 function SubsectionHeading({text}){
     return (

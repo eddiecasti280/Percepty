@@ -1,12 +1,11 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../App.css';
-import KnowledgePartition from '../KnowledgePartition';
-import SectionHeading from '../SectionHeading';
-import colors from '../constants';
-import LatexSnippet from '../LatexSnippet';
+import '../../styles/App.css';
+import KnowledgePartition from '../../components/KnowledgePartition';
+import SectionHeading from '../../components/SectionHeading';
+import colors from '../../utils/constants';
+import LatexSnippet from '../../components/LatexSnippet';
 import 'katex/dist/katex.min.css';
-import AuthorPartition from '../AuthorPartition';
+import AuthorPartition from '../../components/AuthorPartition';
 
 function IntegralsModule() {
   return (
@@ -25,7 +24,7 @@ function IntegralsModule() {
         <LatexSnippet latex='\frac{\mathcal D}{t}=\nabla\times\mathcal{H}' displayMode={true} />
         <LatexSnippet latex='\begin{bmatrix}1&2\\2&1\end{bmatrix}' displayMode={true} />
       </KnowledgePartition>
-      <AuthorPartition name="Eddie Castillo" date="08-15-2024"></AuthorPartition>
+      <AuthorPartition name="Eddie Castillo" description="I'm a student at The University of Texas at Austin pursuing a Master's in Artificial Intelligence." date="08-15-2024"></AuthorPartition>
     </div>
   );
 }

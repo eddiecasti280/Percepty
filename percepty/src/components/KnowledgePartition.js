@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import colors from "./constants";
-import './App.css';
+import colors from "../utils/constants";
+import '../styles/App.css';
 
 function KnowledgePartition({ children, id, isLast }) {
     const containerRef = useRef(null);
