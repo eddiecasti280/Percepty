@@ -149,3 +149,124 @@ p {
 .shadow {
   box-shadow: 0 2px 16px rgba(79, 142, 247, 0.08) !important;
 }
+
+.custom-navbar {
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(79, 142, 247, 0.08);
+  border-bottom: 1px solid #eaeaea;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-brand {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  color: #4F8EF7 !important;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  color: #22223b !important;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s, background 0.2s;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+  color: #4F8EF7 !important;
+  background: #f0f4fa;
+  border-radius: 8px;
+}
+
+.dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(79, 142, 247, 0.12);
+  border: none;
+  margin-top: 0.5rem;
+}
+
+.dropdown-item {
+  font-size: 1rem;
+  color: #22223b;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  background: #eaf1fb;
+  color: #4F8EF7;
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.btn-link {
+  color: #22223b;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.btn-link:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.splash-hero {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #8A9A5B 0%, #A8C686 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.splash-overlay {
+  width: 100vw;
+  min-height: 100vh;
+  background: rgba(34, 34, 59, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.website-name {
+  color: #fff;
+  font-size: 4rem;
+  font-family: 'Fraunces', serif;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 32px rgba(34,34,59,0.18);
+  margin-bottom: 0.5em;
+}
+.header-container2 h3 {
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'EB Garamond', serif;
+  margin-bottom: 2em;
+  text-shadow: 0 2px 16px rgba(34,34,59,0.12);
+}
+.splash-cta {
+  font-size: 1.25rem;
+  padding: 0.75em 2.5em;
+  border-radius: 32px;
+  background: #8A9A5B;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 16px rgba(138, 154, 91, 0.12);
+  border: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.splash-cta:hover, .splash-cta:focus {
+  background: #A8C686;
+  color: #22223b;
+  box-shadow: 0 4px 32px rgba(168, 198, 134, 0.18);
+  text-decoration: none;
+}
