@@ -24,7 +24,7 @@ function IntegralsModule() {
         <LatexSnippet latex='\frac{\mathcal D}{t}=\nabla\times\mathcal{H}' displayMode={true} />
         <LatexSnippet latex='\begin{bmatrix}1&2\\2&1\end{bmatrix}' displayMode={true} />
       </KnowledgePartition>
-      <AuthorPartition name="Eddie Castillo" description="I'm a student at The University of Texas at Austin pursuing a Master's in Artificial Intelligence." date="08-15-2024"></AuthorPartition>
+      <AuthorPartition name="Ella Minnow" description="I'm a student at a university." date="8-2-2026"></AuthorPartition>
     </div>
   );
 }
