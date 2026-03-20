@@ -1,128 +1,27 @@
-.overview-page {
-  min-height: 60vh;
-}
+.overview-page { min-height: 60vh; }
+.overview-banner { display: flex; align-items: center; gap: 32px; margin-bottom: 48px; flex-wrap: wrap; }
+.overview-banner-text { flex: 1; min-width: 280px; }
+.overview-banner-text h1 { font-size: 2.4rem; margin-bottom: 0.2em; }
+.overview-banner-text p { color: var(--text-secondary); font-size: 1.08rem; max-width: 540px; }
+.overview-banner-img { flex: 0 0 260px; max-width: 260px; }
+.overview-banner-img img { width: 100%; height: auto; border-radius: 16px; }
 
-.overview-banner {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  margin-bottom: 48px;
-  flex-wrap: wrap;
-}
-.overview-banner-text {
-  flex: 1;
-  min-width: 280px;
-}
-.overview-banner-text h1 {
-  font-size: 2.4rem;
-  margin-bottom: 0.2em;
-}
-.overview-banner-text p {
-  color: #847577;
-  font-size: 1.08rem;
-  max-width: 540px;
-}
-.overview-banner-img {
-  flex: 0 0 260px;
-  max-width: 260px;
-}
-.overview-banner-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-}
+.module-group { margin-bottom: 48px; }
+.module-group-heading { font-family: 'Fraunces', serif; font-size: 1.35rem; color: var(--color-green); letter-spacing: 0.4px; margin-bottom: 18px; padding-bottom: 6px; border-bottom: 2px solid var(--group-border); display: flex; align-items: center; gap: 8px; }
+.module-group-heading::before { content: ''; display: inline-block; width: 4px; height: 22px; background: var(--color-green); border-radius: 2px; }
 
-/* ===== Group heading ===== */
-.module-group {
-  margin-bottom: 48px;
-}
-.module-group-heading {
-  font-family: 'Fraunces', serif;
-  font-size: 1.35rem;
-  color: #8A9A5B;
-  letter-spacing: 0.4px;
-  margin-bottom: 18px;
-  padding-bottom: 6px;
-  border-bottom: 2px solid #e5e6e4;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.module-group-heading::before {
-  content: '';
-  display: inline-block;
-  width: 4px;
-  height: 22px;
-  background: #8A9A5B;
-  border-radius: 2px;
-}
+.module-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
 
-/* ===== Grid ===== */
-.module-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 28px;
-}
-
-/* ===== Module card ===== */
-.module-card {
-  display: flex;
-  flex-direction: column;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 2px 16px rgba(79, 142, 247, 0.07);
-  border: 1px solid #eaeaea;
-  transition: box-shadow 0.25s, transform 0.25s;
-  height: 100%;
-}
-.module-card:hover {
-  box-shadow: 0 8px 32px rgba(79, 142, 247, 0.14);
-  transform: translateY(-4px);
-}
-
-.module-card-preview {
-  height: 160px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #f7f7fa 0%, #eaf1fb 100%);
-  padding: 20px;
-  border-bottom: 1px solid #eaeaea;
-}
-.module-card-preview .katex {
-  font-size: 1.35rem;
-}
-
-.module-card-body {
-  padding: 20px 24px 24px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-.module-card-body h3 {
-  font-family: 'Fraunces', serif;
-  color: #22223b;
-  font-size: 1.2rem;
-  margin-bottom: 0.3em;
-}
-.module-card-body p {
-  color: #847577;
-  font-size: 0.93rem;
-  flex: 1;
-  margin-bottom: 16px;
-}
-.module-card-body a {
-  align-self: flex-start;
-}
+.module-card { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; background: var(--bg-card); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); transition: box-shadow 0.25s, transform 0.25s, background 0.3s; height: 100%; }
+.module-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.module-card-preview { height: 160px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--bg-preview); padding: 20px; border-bottom: 1px solid var(--border-color); }
+.module-card-preview .katex { font-size: 1.35rem; }
+.module-card-body { padding: 20px 24px 24px; display: flex; flex-direction: column; flex: 1; }
+.module-card-body h3 { font-family: 'Fraunces', serif; color: var(--text-primary); font-size: 1.2rem; margin-bottom: 0.3em; }
+.module-card-body p { color: var(--text-secondary); font-size: 0.93rem; flex: 1; margin-bottom: 16px; }
+.module-card-body a { align-self: flex-start; }
 
 @media (max-width: 768px) {
-  .overview-banner {
-    flex-direction: column;
-    text-align: center;
-  }
-  .overview-banner-img {
-    order: -1;
-  }
+  .overview-banner { flex-direction: column; text-align: center; }
+  .overview-banner-img { order: -1; }
 }

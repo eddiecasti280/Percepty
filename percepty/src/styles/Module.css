@@ -1,66 +1,9 @@
-/* ===== Knowledge Partition ===== */
-.knowledge-partition {
-  background: #fff;
-  padding: 28px 32px;
-  border-radius: 14px;
-  margin-top: 16px;
-  box-shadow: 0 2px 12px rgba(79, 142, 247, 0.06);
-  border: 1px solid #eaeaea;
-}
-
-/* ===== LaTeX Snippet ===== */
-.latex-container {
-  padding: 14px 18px;
-  border: 1px solid #e2e2e2;
-  border-radius: 10px;
-  background: #fafafa;
-  font-size: 16px;
-  margin: 8px 0;
-}
-
-/* ===== Author Partition ===== */
-.author-partition {
-  background: #f0f4fa;
-  padding: 24px;
-  border-radius: 14px;
-  margin-top: 24px;
-  box-shadow: 0 2px 12px rgba(79, 142, 247, 0.06);
-  border: 1px solid #eaeaea;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
-}
-.author-partition-details {
-  background: #fff;
-  border-radius: 10px;
-  padding: 16px 20px;
-  flex: 1;
-  min-width: 240px;
-}
-
-/* ===== Coding Snippet ===== */
-.coding-snippet-wrapper {
-  margin: 12px 0;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-/* ===== Manim Video ===== */
-.manim-vid {
-  text-align: center;
-  margin: 20px 0;
-}
-.manim-vid video {
-  border-radius: 10px;
-  max-width: 100%;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-}
-
-/* ===== Section / Subsection headings inside modules ===== */
-.module-page h1 {
-  margin-bottom: 0.15em;
-}
-.module-page h2 {
-  margin-top: 32px;
-}
+.knowledge-partition { background: var(--bg-partition); padding: 28px 32px; border-radius: 14px; margin-top: 16px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); transition: background 0.3s, border-color 0.3s; }
+.latex-container { padding: 14px 18px; border: 1px solid var(--border-light); border-radius: 10px; background: var(--bg-latex); font-size: 16px; margin: 8px 0; transition: background 0.3s, border-color 0.3s; }
+.author-partition { background: var(--bg-author); padding: 24px; border-radius: 14px; margin-top: 24px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); display: flex; align-items: center; gap: 24px; flex-wrap: wrap; transition: background 0.3s; }
+.author-partition-details { background: var(--bg-card); border-radius: 10px; padding: 16px 20px; flex: 1; min-width: 240px; }
+.coding-snippet-wrapper { margin: 12px 0; border-radius: 10px; overflow: hidden; }
+.manim-vid { text-align: center; margin: 20px 0; }
+.manim-vid video { border-radius: 10px; max-width: 100%; box-shadow: var(--shadow-sm); }
+.module-page h1 { margin-bottom: 0.15em; }
+.module-page h2 { margin-top: 32px; }

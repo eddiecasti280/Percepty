@@ -1,0 +1,109 @@
+:root {
+  /* Backgrounds */
+  --bg-primary: #FBFBF2;
+  --bg-secondary: #f7f7fa;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  --bg-nav: #ffffff;
+  --bg-footer: #22223b;
+  --bg-latex: #fafafa;
+  --bg-partition: #ffffff;
+  --bg-quiz-option: #f7f7fa;
+  --bg-dropdown: #ffffff;
+  --bg-dropdown-hover: #eaf1fb;
+  --bg-author: #f0f4fa;
+  --bg-preview: linear-gradient(135deg, #f7f7fa 0%, #eaf1fb 100%);
+  --bg-splash-features: #FBFBF2;
+  --bg-splash-subjects: #f0f4fa;
+  --bg-progress: #e5e6e4;
+  --bg-explanation: #fff9e6;
+  --bg-correct: #f0f5e8;
+  --bg-incorrect: #fdeaea;
+
+  /* Text */
+  --text-primary: #22223b;
+  --text-secondary: #847577;
+  --text-muted: #A6A2A2;
+  --text-on-dark: rgba(255, 255, 255, 0.7);
+  --color-blue: #4F8EF7;
+  --color-blue-hover: #3b7be0;
+  --color-green: #8A9A5B;
+  --color-green-dark: #6b7f42;
+  --color-green-light: #A8C686;
+  --color-red: #e57373;
+
+  /* Borders & Shadows */
+  --border-color: #eaeaea;
+  --border-light: #e2e2e2;
+  --shadow-sm: 0 2px 16px rgba(79, 142, 247, 0.07);
+  --shadow-md: 0 4px 24px rgba(79, 142, 247, 0.10);
+  --shadow-lg: 0 8px 32px rgba(79, 142, 247, 0.14);
+  --shadow-nav: 0 2px 16px rgba(79, 142, 247, 0.06);
+
+  /* Misc */
+  --explanation-border: #ffe082;
+  --explanation-text: #5d4e37;
+  --quiz-letter-bg: #fff;
+  --quiz-letter-border: #e5e6e4;
+  --group-border: #e5e6e4;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0f0f1a;
+  --bg-secondary: #151525;
+  --bg-card: #1a1a2e;
+  --bg-input: #1a1a2e;
+  --bg-nav: #1a1a2e;
+  --bg-footer: #0a0a14;
+  --bg-latex: #151525;
+  --bg-partition: #1a1a2e;
+  --bg-quiz-option: #151525;
+  --bg-dropdown: #1a1a2e;
+  --bg-dropdown-hover: #252540;
+  --bg-author: #151525;
+  --bg-preview: linear-gradient(135deg, #151525 0%, #1a1a2e 100%);
+  --bg-splash-features: #0f0f1a;
+  --bg-splash-subjects: #151525;
+  --bg-progress: #2a2a44;
+  --bg-explanation: #2a2830;
+  --bg-correct: #1a2a18;
+  --bg-incorrect: #2a1818;
+
+  --text-primary: #e0e0e8;
+  --text-secondary: #8888a0;
+  --text-muted: #555570;
+  --text-on-dark: rgba(255, 255, 255, 0.6);
+  --color-blue: #6fa4f7;
+  --color-blue-hover: #5a90e0;
+  --color-green: #a8c686;
+  --color-green-dark: #8aaa66;
+  --color-green-light: #c2d9a0;
+  --color-red: #ef9a9a;
+
+  --border-color: #2a2a44;
+  --border-light: #252540;
+  --shadow-sm: 0 2px 16px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-nav: 0 2px 16px rgba(0, 0, 0, 0.3);
+
+  --explanation-border: #665830;
+  --explanation-text: #d0c0a0;
+  --quiz-letter-bg: #252540;
+  --quiz-letter-border: #2a2a44;
+  --group-border: #2a2a44;
+}
+
+/* Force KaTeX to respect theme colors */
+[data-theme="dark"] .katex {
+  color: var(--text-primary);
+}
+
+/* Bootstrap overrides for dark mode */
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(0.85);
+}
+
+[data-theme="dark"] .dropdown-divider {
+  border-color: var(--border-color);
+}
