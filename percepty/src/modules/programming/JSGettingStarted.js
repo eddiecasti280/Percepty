@@ -4,6 +4,57 @@ import KnowledgePartition from '../../components/content/KnowledgePartition';
 import SectionHeading from '../../components/common/SectionHeading';
 import SubsectionHeading from '../../components/common/SubsectionHeading';
 import CodingSnippet from '../../components/content/CodingSnippet';
+import Quiz from '../../components/content/Quiz';
+
+const quizQuestions = [
+  {
+    question: 'How do you print "Hello" to the console in JavaScript?',
+    options: [
+      'print("Hello")',
+      'echo("Hello")',
+      'console.log("Hello")',
+      'System.out.println("Hello")',
+    ],
+    correctIndex: 2,
+    explanation: 'JavaScript uses console.log() for console output.',
+  },
+  {
+    question: 'What is the difference between let and const?',
+    options: [
+      'There is no difference',
+      'let can be reassigned, const cannot',
+      'const can be reassigned, let cannot',
+      'let is for numbers, const is for strings',
+    ],
+    correctIndex: 1,
+    explanation:
+      'Variables declared with let can be reassigned; const creates a binding that cannot be reassigned.',
+  },
+  {
+    question: 'What does typeof "hello" return?',
+    options: ['"text"', '"string"', '"str"', '"char"'],
+    correctIndex: 1,
+    explanation: 'The typeof operator returns "string" for string values.',
+  },
+  {
+    question: 'Which is the correct way to declare a constant in JavaScript?',
+    options: [
+      'constant x = 5;',
+      'const x = 5;',
+      'let const x = 5;',
+      'final x = 5;',
+    ],
+    correctIndex: 1,
+    explanation: 'Use the const keyword to declare constants.',
+  },
+  {
+    question: 'What will console.log(2 + "2") output?',
+    options: ['4', '22', '"22"', 'Error'],
+    correctIndex: 1,
+    explanation:
+      'JavaScript coerces the number to a string and concatenates, resulting in "22".',
+  },
+];
 
 function JSGettingStarted() {
   return (
@@ -22,7 +73,8 @@ function JSGettingStarted() {
             rel="noopener noreferrer"
           >
             nodejs.org
-          </a>:
+          </a>
+          :
         </p>
         <CodingSnippet
           code={`# macOS (Homebrew)
@@ -55,10 +107,9 @@ sudo apt update && sudo apt install nodejs npm`}
       <KnowledgePartition id="partition3">
         <p>
           JavaScript has three ways to declare variables: <code>const</code>{' '}
-          (immutable binding), <code>let</code> (block-scoped), and the
-          legacy <code>var</code> (function-scoped). Prefer{' '}
-          <code>const</code> by default and <code>let</code> when you need
-          reassignment.
+          (immutable binding), <code>let</code> (block-scoped), and the legacy{' '}
+          <code>var</code> (function-scoped). Prefer <code>const</code> by
+          default and <code>let</code> when you need reassignment.
         </p>
         <CodingSnippet
           code={`const age = 25;          // number
@@ -76,8 +127,8 @@ console.log(typeof age); // "number"`}
       <KnowledgePartition id="partition4" isLast>
         <p>
           In the browser, use <code>prompt()</code> for input and{' '}
-          <code>console.log()</code> for output. In Node.js, use the
-          built-in <code>readline</code> module:
+          <code>console.log()</code> for output. In Node.js, use the built-in{' '}
+          <code>readline</code> module:
         </p>
         <CodingSnippet
           code={`const readline = require("readline");
@@ -93,6 +144,8 @@ rl.question("What is your name? ", (name) => {
           language="javascript"
         />
       </KnowledgePartition>
+
+      <Quiz questions={quizQuestions} title="JavaScript Basics Quiz" />
     </div>
   );
 }

@@ -4,6 +4,63 @@ import KnowledgePartition from '../../components/content/KnowledgePartition';
 import SectionHeading from '../../components/common/SectionHeading';
 import SubsectionHeading from '../../components/common/SubsectionHeading';
 import CodingSnippet from '../../components/content/CodingSnippet';
+import Quiz from '../../components/content/Quiz';
+
+const quizQuestions = [
+  {
+    question: 'Which is the correct syntax for an if statement in JavaScript?',
+    options: [
+      'if temperature > 30:',
+      'if (temperature > 30) { }',
+      'if temperature > 30 then',
+      'if [temperature > 30]',
+    ],
+    correctIndex: 1,
+    explanation:
+      'JavaScript if statements use parentheses around the condition and braces for the block.',
+  },
+  {
+    question: 'How do you write a for loop that iterates from 0 to 9?',
+    options: [
+      'for (let i = 0; i < 10; i++)',
+      'for i in range(10):',
+      'for (i = 0; i <= 9; i++)',
+      'Both A and C are correct',
+    ],
+    correctIndex: 3,
+    explanation:
+      'Both "i < 10" and "i <= 9" produce the same result (0–9). Option B is Python syntax.',
+  },
+  {
+    question: 'What does === check for in JavaScript?',
+    options: [
+      'Value equality only',
+      'Type equality only',
+      'Both value and type equality',
+      'Reference equality',
+    ],
+    correctIndex: 2,
+    explanation:
+      '=== is the strict equality operator and checks both value and type.',
+  },
+  {
+    question: 'What does "break" do inside a loop?',
+    options: [
+      'Pauses execution for 1 second',
+      'Skips the current iteration',
+      'Exits the loop immediately',
+      'Throws an error',
+    ],
+    correctIndex: 2,
+    explanation: '"break" exits the loop immediately.',
+  },
+  {
+    question: 'What will this code output?\n\nfor (let i = 0; i < 3; i++) {\n  console.log(i);\n}',
+    options: ['1 2 3', '0 1 2', '0 1 2 3', '1 2'],
+    correctIndex: 1,
+    explanation: 'The loop runs for i = 0, 1, 2 (stops when i reaches 3).',
+  },
+];
 
 function JSControlFlow() {
   return (
@@ -86,6 +143,8 @@ for (let i = 0; i < 20; i++) {
           language="javascript"
         />
       </KnowledgePartition>
+
+      <Quiz questions={quizQuestions} title="Control Flow Quiz" />
     </div>
   );
 }

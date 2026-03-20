@@ -5,7 +5,51 @@ import SectionHeading from '../../components/common/SectionHeading';
 import SubsectionHeading from '../../components/common/SubsectionHeading';
 import LatexSnippet from '../../components/content/LatexSnippet';
 import AuthorPartition from '../../components/content/AuthorPartition';
+import Quiz from '../../components/content/Quiz';
 import 'katex/dist/katex.min.css';
+
+const quizQuestions = [
+  {
+    question: 'What type of writing system is the Latin alphabet?',
+    options: ['Syllabary', 'Logography', 'Alphabet', 'Abjad'],
+    correctIndex: 2,
+    explanation:
+      'The Latin alphabet is an alphabet — each letter represents a consonant or vowel phoneme.',
+  },
+  {
+    question: 'In a syllabary, each symbol represents:',
+    options: ['A single consonant', 'A single vowel', 'A syllable', 'A word'],
+    correctIndex: 2,
+    explanation:
+      'In a syllabary like Japanese Hiragana, each character represents a whole syllable.',
+  },
+  {
+    question: 'What is an abjad?',
+    options: [
+      'A writing system with no vowels',
+      'A writing system that writes only consonants (vowels optional)',
+      'A writing system where each symbol is a word',
+      'A pictographic writing system',
+    ],
+    correctIndex: 1,
+    explanation:
+      'An abjad (like Arabic or Hebrew) primarily writes consonants; vowels are often omitted or marked with diacritics.',
+  },
+  {
+    question: 'Which of these is an example of an abugida?',
+    options: ['Latin', 'Arabic', 'Devanagari', 'Chinese'],
+    correctIndex: 2,
+    explanation:
+      'Devanagari (used for Hindi, Sanskrit, etc.) is an abugida where consonants carry an inherent vowel modified by diacritics.',
+  },
+  {
+    question: 'How many basic characters does Japanese Hiragana have?',
+    options: ['26', '46', '100', '200'],
+    correctIndex: 1,
+    explanation:
+      'Hiragana has 46 basic characters, each representing a syllable.',
+  },
+];
 
 function AlphabetsModule() {
   return (
@@ -42,7 +86,10 @@ function AlphabetsModule() {
           or vowel phonemes. The Latin, Greek, and Cyrillic scripts are all
           alphabets.
         </p>
-        <p>The first five letters of the Greek alphabet, with their Latin equivalents:</p>
+        <p>
+          The first five letters of the Greek alphabet, with their Latin
+          equivalents:
+        </p>
         <LatexSnippet
           latex="\alpha \to \text{a}, \quad \beta \to \text{b}, \quad \gamma \to \text{g}, \quad \delta \to \text{d}, \quad \epsilon \to \text{e}"
           displayMode
@@ -94,6 +141,8 @@ function AlphabetsModule() {
           displayMode
         />
       </KnowledgePartition>
+
+      <Quiz questions={quizQuestions} title="Writing Systems Quiz" />
 
       <AuthorPartition
         name="Percepty Team"

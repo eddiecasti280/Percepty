@@ -5,7 +5,53 @@ import SectionHeading from '../../components/common/SectionHeading';
 import SubsectionHeading from '../../components/common/SubsectionHeading';
 import LatexSnippet from '../../components/content/LatexSnippet';
 import AuthorPartition from '../../components/content/AuthorPartition';
+import Quiz from '../../components/content/Quiz';
 import 'katex/dist/katex.min.css';
+
+const quizQuestions = [
+  {
+    question: 'What is the derivative of x³?',
+    latex: '\\frac{d}{dx}\\,x^3 = \\;?',
+    options: ['x²', '3x', '3x²', '3x³'],
+    optionsLatex: ['x^2', '3x', '3x^2', '3x^3'],
+    correctIndex: 2,
+    explanation: 'Using the power rule: d/dx[xⁿ] = nxⁿ⁻¹. So d/dx[x³] = 3x².',
+  },
+  {
+    question: 'What is the derivative of sin(x)?',
+    latex: '\\frac{d}{dx}\\sin(x) = \\;?',
+    options: ['-cos(x)', 'cos(x)', 'sin(x)', '-sin(x)'],
+    optionsLatex: ['-\\cos(x)', '\\cos(x)', '\\sin(x)', '-\\sin(x)'],
+    correctIndex: 1,
+    explanation: 'The derivative of sin(x) is cos(x).',
+  },
+  {
+    question: 'Using the chain rule, what is the derivative of e^(2x)?',
+    latex: '\\frac{d}{dx}\\,e^{2x} = \\;?',
+    options: ['e^(2x)', '2e^x', '2e^(2x)', 'e^(2x)/2'],
+    optionsLatex: ['e^{2x}', '2e^x', '2e^{2x}', '\\frac{e^{2x}}{2}'],
+    correctIndex: 2,
+    explanation:
+      'By chain rule: d/dx[e^(2x)] = e^(2x) · 2 = 2e^(2x).',
+  },
+  {
+    question: 'What is the derivative of ln(x)?',
+    latex: '\\frac{d}{dx}\\ln(x) = \\;?',
+    options: ['1/x', 'x', 'ln(x)/x', '1/(x·ln(x))'],
+    optionsLatex: ['\\frac{1}{x}', 'x', '\\frac{\\ln(x)}{x}', '\\frac{1}{x \\cdot \\ln(x)}'],
+    correctIndex: 0,
+    explanation: 'The derivative of ln(x) is 1/x.',
+  },
+  {
+    question: 'What is the derivative of 5x⁴ + 3x² − 7?',
+    latex: '\\frac{d}{dx}(5x^4 + 3x^2 - 7) = \\;?',
+    options: ['20x³ + 6x', '20x³ + 6x − 7', '5x³ + 3x', '20x⁴ + 6x²'],
+    optionsLatex: ['20x^3 + 6x', '20x^3 + 6x - 7', '5x^3 + 3x', '20x^4 + 6x^2'],
+    correctIndex: 0,
+    explanation:
+      'Differentiate term by term: 5·4x³ + 3·2x − 0 = 20x³ + 6x.',
+  },
+];
 
 function DerivativesModule() {
   return (
@@ -85,11 +131,10 @@ function DerivativesModule() {
         <LatexSnippet latex="\frac{d}{dx}\,\ln x = \frac{1}{x}" displayMode />
         <LatexSnippet latex="\frac{d}{dx}\,\sin x = \cos x" displayMode />
         <LatexSnippet latex="\frac{d}{dx}\,\cos x = -\sin x" displayMode />
-        <LatexSnippet
-          latex="\frac{d}{dx}\,\tan x = \sec^2 x"
-          displayMode
-        />
+        <LatexSnippet latex="\frac{d}{dx}\,\tan x = \sec^2 x" displayMode />
       </KnowledgePartition>
+
+      <Quiz questions={quizQuestions} title="Derivatives Quiz" />
 
       <AuthorPartition
         name="Percepty Team"
