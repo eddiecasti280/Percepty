@@ -22,7 +22,8 @@ function Navigation() {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            {/* Mathematics */}
+
+            {/* -------- Mathematics -------- */}
             <li className="nav-item dropdown">
               <button
                 className="nav-link dropdown-toggle nav-btn-link"
@@ -35,13 +36,19 @@ function Navigation() {
               <ul className="dropdown-menu" aria-labelledby="navDropMath">
                 <li><Link className="dropdown-item" to="/math">Overview</Link></li>
                 <li><hr className="dropdown-divider" /></li>
+
+                <li><h6 className="dropdown-header">Calculus</h6></li>
                 <li><Link className="dropdown-item" to="/math/integration">Integration</Link></li>
-                <li><Link className="dropdown-item" to="/math/basic-operations">Basic Operations</Link></li>
+                <li><Link className="dropdown-item" to="/math/derivatives">Derivatives</Link></li>
                 <li><Link className="dropdown-item" to="/math/vector-arithmetic">Vector Arithmetic</Link></li>
+                <li><hr className="dropdown-divider" /></li>
+
+                <li><h6 className="dropdown-header">Fundamentals</h6></li>
+                <li><Link className="dropdown-item" to="/math/basic-operations">Basic Operations</Link></li>
               </ul>
             </li>
 
-            {/* Programming */}
+            {/* -------- Programming -------- */}
             <li className="nav-item dropdown">
               <button
                 className="nav-link dropdown-toggle nav-btn-link"
@@ -54,12 +61,20 @@ function Navigation() {
               <ul className="dropdown-menu" aria-labelledby="navDropProg">
                 <li><Link className="dropdown-item" to="/programming">Overview</Link></li>
                 <li><hr className="dropdown-divider" /></li>
-                <li><Link className="dropdown-item" to="/programming/python-getting-started">Python: Getting Started</Link></li>
+
+                <li><h6 className="dropdown-header">Python</h6></li>
+                <li><Link className="dropdown-item" to="/programming/python-getting-started">Getting Started</Link></li>
+                <li><Link className="dropdown-item" to="/programming/python-control-flow">Control Flow</Link></li>
+                <li><hr className="dropdown-divider" /></li>
+
+                <li><h6 className="dropdown-header">JavaScript</h6></li>
+                <li><Link className="dropdown-item" to="/programming/js-getting-started">Getting Started</Link></li>
+                <li><Link className="dropdown-item" to="/programming/js-control-flow">Control Flow</Link></li>
               </ul>
             </li>
 
-            {/* Linguistics */}
-            <li className="nav-item dropdown">
+            {/* -------- Linguistics (right-aligned dropdown) -------- */}
+            <li className="nav-item dropdown dropdown-end">
               <button
                 className="nav-link dropdown-toggle nav-btn-link"
                 id="navDropLing"
@@ -68,12 +83,18 @@ function Navigation() {
               >
                 Linguistics
               </button>
-              <ul className="dropdown-menu" aria-labelledby="navDropLing">
+              <ul
+                className="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navDropLing"
+              >
                 <li><Link className="dropdown-item" to="/linguistics">Overview</Link></li>
                 <li><hr className="dropdown-divider" /></li>
+
+                <li><h6 className="dropdown-header">Writing Systems</h6></li>
                 <li><Link className="dropdown-item" to="/linguistics/alphabets">Alphabets &amp; Syllabaries</Link></li>
               </ul>
             </li>
+
           </ul>
         </div>
       </div>

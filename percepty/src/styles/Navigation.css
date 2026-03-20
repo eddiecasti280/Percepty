@@ -30,12 +30,14 @@
   background: #f0f4fa;
 }
 
+/* ---------- Dropdown ---------- */
 .dropdown-menu {
   border-radius: 12px;
   box-shadow: 0 4px 24px rgba(79, 142, 247, 0.10);
   border: 1px solid #eaeaea;
   margin-top: 0.35rem;
   padding: 0.4rem 0;
+  min-width: 13rem;
 }
 
 .dropdown-item {
@@ -49,6 +51,15 @@
 .dropdown-item:focus {
   background: #eaf1fb;
   color: #4F8EF7;
+}
+
+.dropdown-header {
+  font-family: 'Fraunces', serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #8A9A5B;
+  padding: 0.5rem 1rem 0.15rem;
 }
 
 .dropdown-submenu {
@@ -80,4 +91,10 @@
 .nav-btn-link:focus {
   outline: none;
   box-shadow: none;
+}
+
+/* ---------- Right-align the last dropdown so it never overflows ---------- */
+.navbar-nav .nav-item.dropdown-end .dropdown-menu {
+  right: 0;
+  left: auto;
 }

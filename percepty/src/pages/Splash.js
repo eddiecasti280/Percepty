@@ -29,7 +29,8 @@ function Splash() {
           >
             <motion.h1 variants={fadeUp} custom={0}>Percepty</motion.h1>
             <motion.p variants={fadeUp} custom={1}>
-              A progression-based interactive notes platform for computational topics — mathematics, programming, and linguistics.
+              A progression-based interactive notes platform for computational
+              topics — mathematics, programming, and linguistics.
             </motion.p>
             <motion.div variants={fadeUp} custom={2}>
               <Link to="/math" className="splash-cta">Get Started</Link>
@@ -67,14 +68,27 @@ function Splash() {
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.6 }}
           >
-            Every concept builds on the last — learn at your own pace with beautifully structured modules.
+            Every concept builds on the last — learn at your own pace with
+            beautifully structured modules.
           </motion.p>
 
           <div className="features-grid">
             {[
-              { icon: '📐', title: 'Interactive Equations', desc: 'LaTeX-rendered formulas appear inline so you can read mathematics as effortlessly as prose.' },
-              { icon: '🎬', title: 'Visual Animations', desc: 'Manim-powered videos bring abstract ideas to life right inside each lesson.' },
-              { icon: '🧩', title: 'Progressive Curriculum', desc: 'Modules are ordered by difficulty — complete one to unlock insight for the next.' },
+              {
+                icon: '📐',
+                title: 'Interactive Equations',
+                desc: 'LaTeX-rendered formulas appear inline so you can read mathematics as effortlessly as prose.',
+              },
+              {
+                icon: '🎬',
+                title: 'Visual Animations',
+                desc: 'Manim-powered videos bring abstract ideas to life right inside each lesson.',
+              },
+              {
+                icon: '🧩',
+                title: 'Progressive Curriculum',
+                desc: 'Modules are ordered by difficulty — complete one to unlock insight for the next.',
+              },
             ].map((f, i) => (
               <motion.div
                 className="feature-card"
@@ -122,9 +136,24 @@ function Splash() {
 
           <div className="subjects-grid">
             {[
-              { icon: '∑', title: 'Mathematics', desc: 'From basic arithmetic to vector calculus — build a solid quantitative foundation.', to: '/math' },
-              { icon: '💻', title: 'Programming', desc: 'Hands-on guides to Python and beyond, complete with runnable code snippets.', to: '/programming' },
-              { icon: '🗣️', title: 'Linguistics', desc: 'Explore writing systems, phonetics, and the structures that underpin human language.', to: '/linguistics' },
+              {
+                icon: '∑',
+                title: 'Mathematics',
+                desc: 'From basic arithmetic to vector calculus — build a solid quantitative foundation.',
+                to: '/math',
+              },
+              {
+                icon: '💻',
+                title: 'Programming',
+                desc: 'Hands-on guides to Python, JavaScript, and beyond with runnable code snippets.',
+                to: '/programming',
+              },
+              {
+                icon: '🗣️',
+                title: 'Linguistics',
+                desc: 'Explore writing systems, phonetics, and the structures behind human language.',
+                to: '/linguistics',
+              },
             ].map((s, i) => (
               <motion.div
                 className="subject-card"
@@ -156,10 +185,11 @@ function Splash() {
         <div className="splash-bottom-cta-text">
           <h2>Learn at your own pace</h2>
           <p>
-            Whether you're just getting started or brushing up on advanced topics,
-            Percepty's step-by-step modules make it easy to pick up where you left off.
+            Whether you're just getting started or brushing up on advanced
+            topics, Percepty's step-by-step modules make it easy to pick up
+            where you left off.
           </p>
-          <Link to="/math" className="btn btn-green">Start Learning</Link>
+          <Link to="/math" className="btn-green">Start Learning</Link>
         </div>
       </section>
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ModuleCard from '../../components/common/ModuleCard';
-import { linguisticsModules } from '../../utils/moduleData';
+import { linguisticsModuleGroups } from '../../utils/moduleData';
 import '../../styles/Overview.css';
 
 const stagger = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.12 } },
+  visible: { transition: { staggerChildren: 0.1 } },
 };
 const cardAnim = {
   hidden: { opacity: 0, y: 24 },
@@ -32,23 +32,29 @@ function LinguisticsOverview() {
         </div>
       </div>
 
-      <motion.div
-        className="module-grid"
-        variants={stagger}
-        initial="hidden"
-        animate="visible"
-      >
-        {linguisticsModules.map((m) => (
-          <motion.div key={m.id} variants={cardAnim}>
-            <ModuleCard
-              title={m.title}
-              description={m.description}
-              path={m.path}
-              previewLatex={m.previewLatex}
-            />
+      {linguisticsModuleGroups.map((group) => (
+        <div className="module-group" key={group.group}>
+          <h2 className="module-group-heading">{group.group}</h2>
+
+          <motion.div
+            className="module-grid"
+            variants={stagger}
+            initial="hidden"
+            animate="visible"
+          >
+            {group.modules.map((m) => (
+              <motion.div key={m.id} variants={cardAnim}>
+                <ModuleCard
+                  title={m.title}
+                  description={m.description}
+                  path={m.path}
+                  previewLatex={m.previewLatex}
+                />
+              </motion.div>
+            ))}
           </motion.div>
-        ))}
-      </motion.div>
+        </div>
+      ))}
     </div>
   );
 }

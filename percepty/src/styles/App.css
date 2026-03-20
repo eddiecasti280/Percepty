@@ -70,18 +70,30 @@ p {
 .btn-primary:hover {
   background: #3b7be0;
 }
+
 .btn-green {
+  display: inline-block;
   background: #8A9A5B;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  padding: 0.5em 1.5em;
-  transition: background 0.2s;
+  border-radius: 32px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.8em 2.4em;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 18px rgba(138, 154, 91, 0.35);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
 }
-.btn-green:hover {
-  background: #A8C686;
-  color: #22223b;
+.btn-green:hover,
+.btn-green:focus {
+  background: #6b7f42;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(107, 127, 66, 0.45);
+  text-decoration: none;
 }
 
 /* ===== Animations ===== */

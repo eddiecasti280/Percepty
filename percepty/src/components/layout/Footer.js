@@ -16,6 +16,7 @@ function Footer() {
           <ul>
             <li><Link to="/math">Overview</Link></li>
             <li><Link to="/math/integration">Integration</Link></li>
+            <li><Link to="/math/derivatives">Derivatives</Link></li>
             <li><Link to="/math/basic-operations">Basic Operations</Link></li>
             <li><Link to="/math/vector-arithmetic">Vector Arithmetic</Link></li>
           </ul>
@@ -26,6 +27,9 @@ function Footer() {
           <ul>
             <li><Link to="/programming">Overview</Link></li>
             <li><Link to="/programming/python-getting-started">Python: Getting Started</Link></li>
+            <li><Link to="/programming/python-control-flow">Python: Control Flow</Link></li>
+            <li><Link to="/programming/js-getting-started">JS: Getting Started</Link></li>
+            <li><Link to="/programming/js-control-flow">JS: Control Flow</Link></li>
           </ul>
         </div>
 
