@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Percepty
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A progression-based interactive notes platform for computational topics including Mathematics, Programming, and Linguistics.
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+src/
+├── components/          # Reusable UI components
+│   ├── common/          # Generic components (headings, cards)
+│   ├── content/         # Content-rendering components (LaTeX, code, video)
+│   └── layout/          # Layout components (navigation, footer)
+├── modules/             # Learning module pages grouped by subject
+│   ├── linguistics/
+│   ├── mathematics/
+│   └── programming/
+├── pages/               # Top-level pages (splash, 404, overviews)
+│   └── overviews/
+├── styles/              # All CSS files, split by domain
+└── utils/               # Constants, module metadata
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Node.js** ≥ 16
+- **npm** ≥ 8
 
-### `npm test`
+For Manim animations (optional):
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Python** ≥ 3.8
+- Install Python dependencies: `pip install -r manim_anim/requirements.txt`
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# 1. Install dependencies
+npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 2. Start the development server
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open http://localhost:3000 in your browser.
+Adding a New Learning Module
 
-### `npm run eject`
+    Create the module file in src/modules/<subject>/YourModule.js.
+    Register its metadata in src/utils/moduleData.js (title, description, route, preview LaTeX).
+    Add a route in src/App.js.
+    Add a nav link in src/components/layout/Navigation.js.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The overview page for that subject will automatically render a card for the new module from moduleData.js.
+Available Scripts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Command	Description
+npm start	Run development server on port 3000
+npm test	Run tests in watch mode
+npm run build	Production build to build/
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Rendering Manim Animations
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+bash
+cd manim_anim
+pip install -r requirements.txt
+manim -pqh basicOperationsAnimations.py AddThirdCircle
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Place output .mp4 files in public/media/videos/ for the app to reference.
