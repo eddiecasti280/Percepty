@@ -68,18 +68,13 @@
 .navbar-toggler { border: none; outline: none; }
 
 .nav-btn-link {
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  text-decoration: none !important;
-  cursor: pointer;
+  background: none; border: none; box-shadow: none; padding: 0;
+  text-decoration: none !important; cursor: pointer;
 }
 .nav-btn-link:focus { outline: none; box-shadow: none; }
 
 .navbar-nav .nav-item.dropdown-end .dropdown-menu {
-  right: 0;
-  left: auto;
+  right: 0; left: auto;
 }
 
 /* ===== Right-hand utility area ===== */
@@ -90,6 +85,29 @@
   margin-left: 12px;
 }
 
+/* Theme toggle */
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 5px 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+  line-height: 1;
+}
+.theme-toggle-btn:hover {
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+.theme-toggle-btn .material-icons-round {
+  font-size: 1.25rem;
+}
+
+/* User button */
 .nav-user-btn {
   background: none;
   border: 1px solid var(--border-color);
@@ -110,8 +128,10 @@
   border-color: var(--color-blue);
   color: var(--color-blue);
 }
-
 .nav-user-btn.admin-badge {
   border-color: var(--color-green);
   color: var(--color-green);
+}
+.nav-user-btn .material-icons-round {
+  font-size: 1.1rem;
 }

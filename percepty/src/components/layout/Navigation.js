@@ -8,10 +8,7 @@ function Navigation() {
   const { user, isAdmin, logout } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    logout();
-    navigate('/');
-  };
+  const handleLogout = () => { logout(); navigate('/'); };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light custom-navbar">
@@ -26,7 +23,6 @@ function Navigation() {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
-            {/* Mathematics */}
             <li className="nav-item dropdown">
               <button className="nav-link dropdown-toggle nav-btn-link" id="navDropMath"
                 data-bs-toggle="dropdown" aria-expanded="false">Mathematics</button>
@@ -42,7 +38,6 @@ function Navigation() {
                 <li><Link className="dropdown-item" to="/math/basic-operations">Basic Operations</Link></li>
               </ul>
             </li>
-            {/* Programming */}
             <li className="nav-item dropdown">
               <button className="nav-link dropdown-toggle nav-btn-link" id="navDropProg"
                 data-bs-toggle="dropdown" aria-expanded="false">Programming</button>
@@ -58,7 +53,6 @@ function Navigation() {
                 <li><Link className="dropdown-item" to="/programming/js-control-flow">Control Flow</Link></li>
               </ul>
             </li>
-            {/* Linguistics */}
             <li className="nav-item dropdown dropdown-end">
               <button className="nav-link dropdown-toggle nav-btn-link" id="navDropLing"
                 data-bs-toggle="dropdown" aria-expanded="false">Linguistics</button>
@@ -71,18 +65,24 @@ function Navigation() {
             </li>
           </ul>
 
-          {/* Right side */}
           <div className="nav-utilities">
             <ThemeToggle />
-
             {user ? (
               <div className="dropdown">
                 <button className={`nav-user-btn dropdown-toggle ${isAdmin ? 'admin-badge' : ''}`}
                   data-bs-toggle="dropdown" aria-expanded="false">
-                  {isAdmin ? '⚙ Admin' : user.email.split('@')[0]}
+                  {isAdmin && (
+                    <span className="material-icons-round">admin_panel_settings</span>
+                  )}
+                  {isAdmin ? 'Admin' : user.email.split('@')[0]}
                 </button>
                 <ul className="dropdown-menu dropdown-menu-end">
-                  <li><span className="dropdown-item-text" style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{user.email}</span></li>
+                  <li>
+                    <span className="dropdown-item-text"
+                      style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                      {user.email}
+                    </span>
+                  </li>
                   <li><hr className="dropdown-divider" /></li>
                   {isAdmin && (
                     <li><Link className="dropdown-item" to="/admin">Dashboard</Link></li>

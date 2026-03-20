@@ -23,7 +23,6 @@ function QuizEditor({ quiz, onChange }) {
   };
 
   const addQuestion = () => onChange({ ...quiz, questions: [...quiz.questions, emptyQuestion()] });
-
   const removeQuestion = (idx) =>
     onChange({ ...quiz, questions: quiz.questions.filter((_, i) => i !== idx) });
 
@@ -31,8 +30,7 @@ function QuizEditor({ quiz, onChange }) {
     <div>
       <div className="editor-field" style={{ marginBottom: 16 }}>
         <label>Quiz Title</label>
-        <input value={quiz.title} onChange={(e) => update('title', e.target.value)}
-          placeholder="Practice Questions" />
+        <input value={quiz.title} onChange={(e) => update('title', e.target.value)} placeholder="Practice Questions" />
       </div>
 
       {quiz.questions.map((q, qIdx) => (
@@ -48,8 +46,7 @@ function QuizEditor({ quiz, onChange }) {
           </div>
           <div className="editor-field">
             <label>LaTeX (optional, shown with question)</label>
-            <input value={q.latex || ''} onChange={(e) => updateQuestion(qIdx, 'latex', e.target.value)}
-              placeholder="x^2 + 1 = 0" />
+            <input value={q.latex || ''} onChange={(e) => updateQuestion(qIdx, 'latex', e.target.value)} placeholder="x^2 + 1 = 0" />
           </div>
 
           <label style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
@@ -68,8 +65,10 @@ function QuizEditor({ quiz, onChange }) {
           </div>
 
           <div className="editor-field" style={{ marginTop: 8 }}>
-            <label>Explanation (optional)</label>
-            <input value={q.explanation || ''} onChange={(e) => updateQuestion(qIdx, 'explanation', e.target.value)} />
+            <label>Explanation (LaTeX — use <code>\text&#123;&#125;</code> for prose, raw symbols for math)</label>
+            <input value={q.explanation || ''} onChange={(e) => updateQuestion(qIdx, 'explanation', e.target.value)}
+              placeholder="\\text{By the power rule: } \\frac{d}{dx}x^3 = 3x^2."
+              style={{ fontFamily: 'monospace' }} />
           </div>
         </div>
       ))}

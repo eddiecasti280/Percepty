@@ -12,32 +12,18 @@ function Footer() {
         </div>
 
         <div className="footer-links">
-          <h5>Mathematics</h5>
+          <h5>Subjects</h5>
           <ul>
-            <li><Link to="/math">Overview</Link></li>
-            <li><Link to="/math/integration">Integration</Link></li>
-            <li><Link to="/math/derivatives">Derivatives</Link></li>
-            <li><Link to="/math/basic-operations">Basic Operations</Link></li>
-            <li><Link to="/math/vector-arithmetic">Vector Arithmetic</Link></li>
+            <li><Link to="/math">Mathematics</Link></li>
+            <li><Link to="/programming">Programming</Link></li>
+            <li><Link to="/linguistics">Linguistics</Link></li>
           </ul>
         </div>
 
         <div className="footer-links">
-          <h5>Programming</h5>
+          <h5>Percepty</h5>
           <ul>
-            <li><Link to="/programming">Overview</Link></li>
-            <li><Link to="/programming/python-getting-started">Python: Getting Started</Link></li>
-            <li><Link to="/programming/python-control-flow">Python: Control Flow</Link></li>
-            <li><Link to="/programming/js-getting-started">JS: Getting Started</Link></li>
-            <li><Link to="/programming/js-control-flow">JS: Control Flow</Link></li>
-          </ul>
-        </div>
-
-        <div className="footer-links">
-          <h5>Linguistics</h5>
-          <ul>
-            <li><Link to="/linguistics">Overview</Link></li>
-            <li><Link to="/linguistics/alphabets">Alphabets &amp; Syllabaries</Link></li>
+            <li><Link to="/about">About</Link></li>
           </ul>
         </div>
       </div>

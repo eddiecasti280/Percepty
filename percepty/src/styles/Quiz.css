@@ -63,3 +63,46 @@
 .quiz-result-content .inline-latex .katex-display { display: inline; margin: 0; }
 .quiz-result-content .inline-latex .katex { font-size: 1rem; }
 @media (max-width: 600px) { .quiz-container { padding: 20px; } .quiz-header { flex-direction: column; align-items: flex-start; } .quiz-option { padding: 12px 14px; } .quiz-actions { flex-direction: column; } .quiz-btn { width: 100%; } }
+
+/* ===== LaTeX explanation ===== */
+.quiz-explanation {
+  background: var(--bg-explanation);
+  border: 1px solid var(--explanation-border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+}
+.quiz-explanation-label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--explanation-text);
+  margin-bottom: 4px;
+}
+.quiz-explanation-latex .katex-display {
+  margin: 4px 0 0;
+  text-align: left;
+}
+.quiz-explanation-latex .katex {
+  white-space: normal;
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* Result-screen explanation */
+.quiz-result-explanation {
+  margin-top: 6px;
+  padding: 8px 12px;
+  background: var(--bg-explanation);
+  border-radius: 6px;
+  border: 1px solid var(--explanation-border);
+}
+.quiz-result-explanation .katex-display {
+  margin: 0;
+  text-align: left;
+}
+.quiz-result-explanation .katex {
+  white-space: normal;
+  text-align: left;
+  font-size: 0.92rem;
+}
